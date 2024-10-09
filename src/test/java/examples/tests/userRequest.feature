@@ -5,7 +5,7 @@ Feature: User API Tests
     And print "--opening user API--"
 
   Scenario: Create User
-    * def reqBody = {"id": 2401, "username": "sansan", "firstName": "sanny", "lastName": "sunny", "email": "sansan@mailinator.com", "password": "Test123@", "phone": "082277889900", "userStatus": 0}
+    * def reqBody = {"id": 2401, "username": "sansan", "firstName": "sanny", "lastName": "sunny", "email": "sansan@mailinator.com", "password": "Test123", "phone": "082277889900", "userStatus": 0}
     When url "https://petstore.swagger.io/v2/user"
     And request reqBody
     And method post
@@ -25,7 +25,7 @@ Feature: User API Tests
     And status 200
 
   Scenario: Update Existing User
-    * def reqBody = {"id": 2401, "username": "sansan update", "firstName": "sanny", "lastName": "sunny", "email": "sansan@mailinator.com", "password": "Test123@", "phone": "082277889900", "userStatus": 1}
+    * def reqBody = {"id": 2401, "username": "sansan", "firstName": "sanny", "lastName": "sunny", "email": "sansan@mailinator.com", "password": "Test123@", "phone": "082277889900", "userStatus": 1}
     When url "https://petstore.swagger.io/v2/user/sansan"
     And request reqBody
     And method put
